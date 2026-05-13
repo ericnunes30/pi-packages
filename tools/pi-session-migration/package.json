@@ -1,0 +1,13 @@
+{
+  "name": "pi-session-migration",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "CLI migrator — import existing JSONL sessions into pi-session-memory SQLite database",
+  "bin": {
+    "pi-session-migrate": "./src/importer.ts"
+  },
+  "scripts": {
+    "migrate": "node src/importer.ts"
+  }
+}

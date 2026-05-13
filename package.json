@@ -1,0 +1,14 @@
+{
+  "name": "@ericnunes30/pi-packages",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pi coding agent packages by ericnunes30",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./extensions"]
+  },
+  "scripts": {
+    "test": "cd extensions/pi-memory && npm test",
+    "test:all": "npm test"
+  }
+}

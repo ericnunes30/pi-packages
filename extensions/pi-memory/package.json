@@ -1,0 +1,14 @@
+{
+  "name": "@ericnunes30/pi-memory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Pi extension — SQLite+FTS5 conversational memory with session_search tool",
+  "keywords": ["pi-extension", "pi-memory", "session-memory"],
+  "scripts": {
+    "test": "node --experimental-strip-types test/run-tests.ts"
+  },
+  "dependencies": {
+    "@sinclair/typebox": "^0.34.0"
+  }
+}
