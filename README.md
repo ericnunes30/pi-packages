@@ -25,6 +25,15 @@ cd extensions/pi-session-migration
 npx tsx src/importer.ts
 ```
 
+### pi-paste-image
+
+Extensão para colar imagens da área de transferência diretamente nas conversas do Pi via comando `/pasteimage`.
+
+```bash
+/pasteimage                    # Envia apenas a imagem do clipboard
+/pasteimage descreva isto     # Envia texto + imagem
+```
+
 ## Estrutura
 
 ```
@@ -35,11 +44,16 @@ pi-packages/
 │   │   ├── package.json
 │   │   ├── src/                 ← Event hooks + SQLite + tools
 │   │   └── test/                ← 31 testes unitários
-│   └── pi-session-migration/    ← CLI de migração
-│       ├── package.json
-│       ├── README.md
+│   ├── pi-session-migration/    ← CLI de migração
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src/
+│   │       └── importer.ts
+│   └── pi-paste-image/          ← Colar imagens do clipboard
+│       ├── index.ts             ← Entry point
+│       ├── package.json         ← Dependências (@mariozechner/clipboard)
 │       └── src/
-│           └── importer.ts
+│           └── index.ts         ← Comando /pasteimage
 ├── package.json                 ← Manifesto Pi Package
 ├── .gitignore
 └── README.md
